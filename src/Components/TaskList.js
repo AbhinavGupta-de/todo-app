@@ -14,15 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 const TaskList = () => {
 	return (
 		<div className="task-container">
-			<ul className="flex flex-col w-full">
-				<li id="todo-list">
-					<RadioButtonUncheckedIcon color="linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)" />
-					<span>Task 1 Here</span>
-					<CloseIcon id="close-icon" />
-				</li>
-				<li id="todo-list">Task 2</li>
-				<li id="todo-list">Task 3</li>
-			</ul>
+			<ul className="flex flex-col w-full"></ul>
 		</div>
 	);
 };
