@@ -31,6 +31,8 @@ body {
 	border: none;
 	border-radius: 5px;
 	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .tasks:focus {
 	outline: none;
@@ -47,17 +49,13 @@ body {
 }
 
 #todo-list {
-	border-bottom: 1px solid hsl(236, 9%, 61%);
+	border-bottom: 2px solid hsl(235, 5%, 43%);
 	width: 100%;
 	margin: 2px;
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 10px;
 }
-
-#todo-list span {
-	text-align: left;
-}
-
 #close-icon {
 	display: none;
 }
@@ -66,4 +64,14 @@ body {
 	#close-icon {
 		display: block;
 	}
+}
+
+.list-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-size: 0.8rem;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 100;
 }
