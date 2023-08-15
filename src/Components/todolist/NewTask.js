@@ -10,7 +10,7 @@ const NewTask = ({ length, addTask }) => {
 	};
 
 	const newTask = () => {
-		if (task === null) return;
+		if (task === null || task === '') return;
 		if (task.trim !== '') {
 			const newTodo = {
 				id: length + 1,

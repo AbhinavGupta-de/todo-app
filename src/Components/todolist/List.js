@@ -1,29 +1,42 @@
 import React from 'react';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CloseIcon from '@mui/icons-material/Close';
 
-const List = ({ todo, statusToggle, closeTask }) => {
-	const statusToggleHandler = () => {
-		statusToggle(todo.id);
-	};
+import Task from './Task';
 
-	const closeTaskHandler = () => {
-		closeTask(todo.id);
-	};
-
+const List = ({ todos, statusToggle, closeTask, filterString }) => {
 	return (
-		<li key={todo.id} id="todo-list">
-			<div className="flex flex-row justify-between">
-				<div onClick={statusToggleHandler} className="mr-2">
-					{todo.status ? <CheckCircleIcon /> : <RadioButtonUncheckedIcon />}
-				</div>
-				{todo.description}
-			</div>
-			<button onClick={closeTaskHandler}>
-				<CloseIcon id="close-icon" />
-			</button>
-		</li>
+		<>
+			{todos.map((todo) => {
+				if (filterString === 'All') {
+					return (
+						<Task
+							todo={todo}
+							statusToggle={statusToggle}
+							closeTask={closeTask}
+						/>
+					);
+				} else if (filterString === 'Active') {
+					if (todo.status === false) {
+						return (
+							<Task
+								todo={todo}
+								statusToggle={statusToggle}
+								closeTask={closeTask}
+							/>
+						);
+					}
+				} else if (filterString === 'Completed') {
+					if (todo.status === true) {
+						return (
+							<Task
+								todo={todo}
+								statusToggle={statusToggle}
+								closeTask={closeTask}
+							/>
+						);
+					}
+				}
+			})}
+		</>
 	);
 };
 
