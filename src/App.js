@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Components/Header';
-import Hero from './Components/Hero';
+import Header from './Components/header/Header';
+import Hero from './Components/todolist/Hero';
 
 const App = () => {
 	const [isDark, setIsDark] = React.useState(true);

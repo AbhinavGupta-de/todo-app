@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
-import { TaskContext } from '../Context/TaskContext';
+// import { TaskContext } from '../Context/TaskContext';
 
 const NewTask = () => {
-	const data = useContext(TaskContext);
+	// const data = useContext(TaskContext);
 
-	const addTask = (e) => {
-		setTasks([...tasks, e.target.value]);
-	};
 	return (
 		<div className="task-container mb-7">
 			<input type="checkbox" className="checkbox" />

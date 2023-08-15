@@ -2,6 +2,7 @@ import React from 'react';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CloseIcon from '@mui/icons-material/Close';
+import NewTask from './NewTask';
 
 // TODO Make the tasks editable
 // TODO Make the tasks deletable
@@ -13,8 +14,13 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const TaskList = () => {
 	return (
-		<div className="task-container">
-			<ul className="flex flex-col w-full"></ul>
+		<div className="w-3/5">
+			<NewTask />
+			<div className="task-container">
+				<ul className="bt-1">
+					<li>Task here</li>
+				</ul>
+			</div>
 		</div>
 	);
 };
