@@ -30,7 +30,6 @@ const NewTask = ({ length, addTask }) => {
 	return (
 		<div className="mb-7">
 			<form onSubmit={(e) => e.preventDefault()} className="task-container">
-				<input type="checkbox" className="checkbox" />
 				<input
 					type="text"
 					placeholder="Add a new task..."
