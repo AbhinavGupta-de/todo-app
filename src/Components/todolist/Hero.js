@@ -31,7 +31,6 @@ const Hero = () => {
 
 	const clearCompleted = () => {
 		setTodos((prevTodos) => {
-			console.log({ prevTodos });
 			return prevTodos.filter((todo) => todo.completed === false);
 		});
 	};
