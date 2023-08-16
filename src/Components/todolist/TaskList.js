@@ -12,11 +12,10 @@ const TaskList = () => {
 	const [filterString, setFilterString] = React.useState('All');
 
 	return (
-		<div className="w-3/5">
+		<div style={{ width: '60%' }}>
 			<div className="task-container">
-				<ul className="bt-1 w-full text-left">
+				<ul className="tasklist">
 					<List filterString={filterString} />
-
 					<ListOptions
 						setFilterString={setFilterString}
 						filterString={filterString}

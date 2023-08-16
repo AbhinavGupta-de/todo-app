@@ -12,14 +12,12 @@ const ThemeChangeButton = () => {
 	};
 
 	return (
-		<div>
-			<button onClick={handleClick}>
-				{isDark ? (
-					<LightModeIcon fontSize="large" />
-				) : (
-					<DarkModeIcon fontSize="large" />
-				)}
-			</button>
+		<div className="themechangebtn" onClick={handleClick}>
+			{isDark ? (
+				<LightModeIcon fontSize="large" />
+			) : (
+				<DarkModeIcon fontSize="large" />
+			)}
 		</div>
 	);
 };

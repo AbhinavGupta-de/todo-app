@@ -6,17 +6,16 @@ const ListOptions = ({ setFilterString, filterString }) => {
 	const { todos, clearCompleted } = todData;
 
 	const handleClick = (e) => {
-		e.target.className = 'active';
 		setFilterString(e.target.innerText);
 	};
 	return (
-		<li className="mt-2">
+		<li style={{ marginTop: '2px' }}>
 			<div className="list-options">
-				<span>{todos.length} items left</span>
-				<div className="flex flex-row justify-between gap-3">
+				{todos.length} items left
+				<div className="list-options-btn-container">
 					<button
 						className={`${
-							filterString === 'All' && 'text-[#0384fc] font-bold'
+							filterString === 'All' ? 'list-options-btn inline' : 'inline'
 						}`}
 						onClick={handleClick}
 					>
@@ -24,7 +23,7 @@ const ListOptions = ({ setFilterString, filterString }) => {
 					</button>
 					<button
 						className={`${
-							filterString === 'Active' && 'text-[#0384fc] font-bold'
+							filterString === 'Active' ? 'list-options-btn inline' : 'inline'
 						}`}
 						onClick={handleClick}
 					>
@@ -32,14 +31,18 @@ const ListOptions = ({ setFilterString, filterString }) => {
 					</button>
 					<button
 						className={`${
-							filterString === 'Completed' && 'text-[#0384fc] font-bold'
+							filterString === 'Completed'
+								? 'list-options-btn inline'
+								: 'inline'
 						}`}
 						onClick={handleClick}
 					>
 						Completed
 					</button>
 				</div>
-				<button onClick={clearCompleted}>Clear Completed</button>
+				<button onClick={clearCompleted} className="inline">
+					Clear Completed
+				</button>
 			</div>
 		</li>
 	);

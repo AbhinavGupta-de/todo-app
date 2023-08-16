@@ -1,10 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
 	margin: 0;
 	padding: 0;
+}
+
+.App {
+	/* items-center w-4/5 m-auto mt-10; */
+	align-items: center;
+	width: 85%;
+	margin: auto;
+	margin-top: 10rem;
+}
+
+.header {
+	/* flex justify-between items-center */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-text {
+	/* text-center font-bold text-6xl */
+	text-align: center;
+	font-weight: 700;
+	font-size: 3.5rem;
 }
 
 body {
@@ -23,6 +41,38 @@ body {
 	padding: 0.8rem;
 	width: 80%;
 	border-radius: 0.4rem;
+}
+
+.hero {
+	/* mt-20 items-center flex flex-col w-auto */
+
+	margin-top: 8rem;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+
+.tasklist {
+	/* bt-1 w-full text-left */
+	/* border-top: 1px solid hsl(236, 9%, 61%); */
+	width: 100%;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: none;
+}
+
+.task {
+	/* flex flex-row justify-between */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.themechangebtn {
+	cursor: pointer;
 }
 
 .tasks {
@@ -54,7 +104,7 @@ body {
 	margin: 2px;
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 #close-icon {
 	display: none;
@@ -74,4 +124,26 @@ body {
 	font-size: 0.95rem;
 	font-family: 'Rajdhani', sans-serif;
 	font-weight: 100;
+}
+
+.inline {
+	text-wrap: nowrap;
+	background-color: transparent;
+	border: none;
+	color: hsl(236, 9%, 61%);
+	cursor: pointer;
+}
+
+.list-options-btn-container {
+	/* flex flex-row justify-between gap-3 */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 0.7rem;
+}
+
+.list-options-btn {
+	/* 'text-[#0384fc] font-bold' */
+	color: #0384fc;
+	font-weight: 700;
 }

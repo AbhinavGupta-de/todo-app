@@ -9,16 +9,16 @@ const Hero = () => {
 
 	if (todos.length === 0)
 		return (
-			<div className="mt-20 items-center flex flex-col w-auto">
-				<div className="w-3/5">
+			<div className="hero">
+				<div style={{ width: '60%' }}>
 					<NewTask addTask={setTodos} length={todos.length} />
 				</div>
 			</div>
 		);
 
 	return (
-		<div className="mt-20 items-center flex flex-col w-auto">
-			<div className="w-3/5">
+		<div className="hero">
+			<div style={{ width: '60%' }}>
 				<NewTask addTask={setTodos} length={todos.length} />
 			</div>
 			<TaskList />
