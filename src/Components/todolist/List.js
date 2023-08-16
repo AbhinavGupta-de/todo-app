@@ -38,6 +38,7 @@ const List = ({ filterString }) => {
 						);
 					}
 				}
+				return <h1></h1>;
 			})}
 		</>
 	);

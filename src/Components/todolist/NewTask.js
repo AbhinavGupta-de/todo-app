@@ -28,12 +28,17 @@ const NewTask = ({ length, addTask }) => {
 	};
 
 	return (
-		<div className="mb-7">
-			<form onSubmit={(e) => e.preventDefault()} className="task-container">
+		<div style={{ marginBottom: '2rem' }}>
+			<form
+				onSubmit={(e) => e.preventDefault()}
+				className="task-container"
+				style={{ height: '25px' }}
+			>
 				<input
 					type="text"
 					placeholder="Add a new task..."
 					className="tasks"
+					style={{ fontSize: '18px' }}
 					value={task}
 					onChange={handleTask}
 				/>

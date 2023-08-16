@@ -3,8 +3,8 @@ import ThemeChangeButton from './ThemeChangeButton';
 
 const Header = () => {
 	return (
-		<header className="flex justify-between items-center">
-			<h1 className="text-center font-bold text-6xl">Task Forge</h1>
+		<header className="header">
+			<h1 className="header-text">Task Forge</h1>
 			<ThemeChangeButton />
 		</header>
 	);

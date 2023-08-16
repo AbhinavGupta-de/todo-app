@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		// TODO Do something about changing the background color when we change the state
 
-		<div className="items-center w-4/5 m-auto mt-10">
+		<div className="App">
 			<ThemeContextProvider>
 				<TodosContextProvider>
 					<Header />
