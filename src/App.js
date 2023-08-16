@@ -1,20 +1,20 @@
 import React from 'react';
 import Header from './Components/header/Header';
 import Hero from './Components/todolist/Hero';
+import ThemeContextProvider from './contexts/ThemeContext';
+import TodosContextProvider from './contexts/TodosContext';
 
 const App = () => {
-	const [isDark, setIsDark] = React.useState(true);
-
-	const handleClick = () => {
-		setIsDark(!isDark);
-	};
-
 	return (
 		// TODO Do something about changing the background color when we change the state
 
 		<div className="items-center w-4/5 m-auto mt-10">
-			<Header isDark={isDark} handleClick={handleClick} />
-			<Hero />
+			<ThemeContextProvider>
+				<TodosContextProvider>
+					<Header />
+					<Hero />
+				</TodosContextProvider>
+			</ThemeContextProvider>
 		</div>
 	);
 };

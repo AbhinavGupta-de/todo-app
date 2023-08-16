@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Task from './Task';
+import { TodosContext } from '../../contexts/TodosContext';
 
-const List = ({ todos, statusToggle, closeTask, filterString }) => {
+const List = ({ filterString }) => {
+	const todData = useContext(TodosContext);
+	const { todos, closeTask, statusToggle } = todData;
 	return (
 		<>
 			{todos.map((todo) => {
