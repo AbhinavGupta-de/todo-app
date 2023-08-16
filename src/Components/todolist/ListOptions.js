@@ -1,23 +1,40 @@
 import React from 'react';
 
-const ListOptions = ({ todos, setFilterString }) => {
+const ListOptions = ({
+	todos,
+	setFilterString,
+	filterString,
+	clearCompleted,
+}) => {
 	const handleClick = (e) => {
+		e.target.className = 'active';
 		setFilterString(e.target.innerText);
 	};
 	return (
 		<li className="mt-2">
 			<div className="list-options">
 				<span>{todos.length} items left</span>
-				<div className="flex flex-row justify-between">
-					<button className="mr-2" onClick={handleClick}>
+				<div className="flex flex-row justify-between gap-3">
+					<button
+						className={`${filterString === 'All' && 'text-[#0384fc]'}`}
+						onClick={handleClick}
+					>
 						All
 					</button>
-					<button className="mr-2" onClick={handleClick}>
+					<button
+						className={`${filterString === 'Active' && 'text-[#0384fc]'}`}
+						onClick={handleClick}
+					>
 						Active
 					</button>
-					<button onClick={handleClick}>Completed</button>
+					<button
+						className={`${filterString === 'Completed' && 'text-[#0384fc]'}`}
+						onClick={handleClick}
+					>
+						Completed
+					</button>
 				</div>
-				<button>Clear Completed</button>
+				<button onClick={clearCompleted}>Clear Completed</button>
 			</div>
 		</li>
 	);

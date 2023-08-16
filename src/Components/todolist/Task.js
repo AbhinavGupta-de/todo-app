@@ -16,9 +16,13 @@ const Task = ({ todo, statusToggle, closeTask }) => {
 		<li key={todo.id} id="todo-list">
 			<div className="flex flex-row justify-between">
 				<div onClick={statusToggleHandler} className="mr-2">
-					{todo.status ? <CheckCircleIcon /> : <RadioButtonUncheckedIcon />}
+					{todo.completed ? <CheckCircleIcon /> : <RadioButtonUncheckedIcon />}
 				</div>
-				{todo.description}
+				{todo.completed ? (
+					<del className="text-[#707280]">{todo.description}</del>
+				) : (
+					todo.description
+				)}
 			</div>
 			<button onClick={closeTaskHandler}>
 				<CloseIcon id="close-icon" />

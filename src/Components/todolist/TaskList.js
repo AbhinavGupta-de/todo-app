@@ -8,7 +8,7 @@ import ListOptions from './ListOptions';
 // TODO Make the tasks filterable
 // TODO Make the number of tasks visible ---> 3 tasks left...
 
-const TaskList = ({ closeTask, statusToggle, todos }) => {
+const TaskList = ({ closeTask, statusToggle, todos, clearCompleted }) => {
 	const [filterString, setFilterString] = React.useState('All');
 
 	return (
@@ -22,7 +22,12 @@ const TaskList = ({ closeTask, statusToggle, todos }) => {
 						statusToggle={statusToggle}
 					/>
 
-					<ListOptions todos={todos} setFilterString={setFilterString} />
+					<ListOptions
+						todos={todos}
+						setFilterString={setFilterString}
+						filterString={filterString}
+						clearCompleted={clearCompleted}
+					/>
 				</ul>
 			</div>
 		</div>

@@ -13,7 +13,7 @@ const Hero = () => {
 	const statusToggle = (id) => {
 		const updatedTodos = todos.map((todo) => {
 			if (todo.id === id) {
-				todo.status = !todo.status;
+				todo.completed = !todo.completed;
 			}
 			return todo;
 		});
@@ -29,6 +29,13 @@ const Hero = () => {
 			</div>
 		);
 
+	const clearCompleted = () => {
+		setTodos((prevTodos) => {
+			console.log({ prevTodos });
+			return prevTodos.filter((todo) => todo.completed === false);
+		});
+	};
+
 	return (
 		<div className="mt-20 items-center flex flex-col w-auto">
 			<div className="w-3/5">
@@ -38,6 +45,7 @@ const Hero = () => {
 				closeTask={closeTask}
 				statusToggle={statusToggle}
 				todos={todos}
+				clearCompleted={clearCompleted}
 			/>
 		</div>
 	);

@@ -15,7 +15,7 @@ const List = ({ todos, statusToggle, closeTask, filterString }) => {
 						/>
 					);
 				} else if (filterString === 'Active') {
-					if (todo.status === false) {
+					if (todo.completed === false) {
 						return (
 							<Task
 								todo={todo}
@@ -25,7 +25,7 @@ const List = ({ todos, statusToggle, closeTask, filterString }) => {
 						);
 					}
 				} else if (filterString === 'Completed') {
-					if (todo.status === true) {
+					if (todo.completed === true) {
 						return (
 							<Task
 								todo={todo}
