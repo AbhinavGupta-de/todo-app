@@ -1,4 +1,4 @@
-# ToDo App
+# Task Forge
 
 ## Description
 
@@ -19,9 +19,9 @@ As this project was developed while learning React, there are some known issues 
 
 1. The app is not using any database. It is using local storage to store the tasks. This means that if you refresh the page, all the tasks will be lost.
 2. The app is not using any authentication. This means that anyone can access the app and add, edit or delete tasks.
-3. Also I did use tailwind but the whole app is not using tailwind. I have used some CSS as well so sometime in the future will also have to fix it.
-4. The app is only avialable with dark mode as for now. I will add light mode in the future. However the button is there but it is not working.
+3. I did try to use tailwind but it didn't work because of some issues in creat-react-app that's why I have to switch back to the old CSS.
+4. The app is only available in dark mode for now. I will add light mode in the future. However, the button is there but it is not working.
 
 ## Link to the App
 
-[Task Forge](https://task-forge.netlify.app/)
+[Task Forge](https://taskforge.netlify.app/)
