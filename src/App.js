@@ -3,6 +3,7 @@ import Header from './Components/header/Header';
 import Hero from './Components/todolist/Hero';
 import ThemeContextProvider from './contexts/ThemeContext';
 import TodosContextProvider from './contexts/TodosContext';
+import Footer from './Components/footer/Footer';
 
 const App = () => {
 	return (
@@ -13,6 +14,7 @@ const App = () => {
 				<TodosContextProvider>
 					<Header />
 					<Hero />
+					<Footer />
 				</TodosContextProvider>
 			</ThemeContextProvider>
 		</div>
